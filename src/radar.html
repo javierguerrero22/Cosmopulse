@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosmoPulse - Asteroids Radar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/imgs/android-chrome-512x512-removebg-preview.png" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/cosmopulse.css" />
+    <link rel="stylesheet" href="./css/cosmopulse-large.css" />
+    <link rel="stylesheet" href="./css/cosmopulse-extra-large.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body>
+    <div id="main-header"></div>
+
+    <div id="global-alert-banner" class="alert-banner hidden"></div>
+
+    <main class="container">
+      <section class="radar-section">
+        <h2 class="section-title">Near Earth Object Service (NEOs)</h2>
+        <p class="section-subtitle">
+          Real-time monitoring of asteroids passing close to Earth using NASA
+          data.
+        </p>
+
+        <div class="radar-controls">
+          <label for="unit-select">Unit of Distance:</label>
+          <select id="unit-select">
+            <option value="km">Kilometers (km)</option>
+            <option value="mi">Miles (mi)</option>
+            <option value="ld">Lunar distance (LD)</option>
+          </select>
+        </div>
+
+        <div id="asteroid-radar-panel" class="radar-panel">
+          <div class="loading">Scanning deep space...</div>
+        </div>
+      </section>
+    </main>
+
+    <div id="main-footer"></div>
+  </body>
+</html>

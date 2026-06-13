@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosmoPulse | Spacial Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/imgs/android-chrome-512x512-removebg-preview.png" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/cosmopulse.css" />
+    <link rel="stylesheet" href="./css/cosmopulse-large.css" />
+    <link rel="stylesheet" href="./css/cosmopulse-extra-large.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body>
+    <div id="main-header"></div>
+
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            srcset="/imgs/hero-small-img.jpg"
+            media="(max-width: 720px)"
+          />
+          <img
+            src="/imgs/hero-img.jfif"
+            alt="Hero img"
+            width="1200"
+            height="600"
+            class="hero-img"
+            fetchpriority="high"
+          />
+        </picture>
+        <article class="hero-msg">
+          <h1>COSMOPULSE <br /><span>(THE UNIVERSE LIVE)</span></h1>
+          <p>
+            Explore the mysteries of the deep cosmos in real time. Track
+            near-Earth asteroids and be the first to know about global rocket
+            launches with direct data from NASA.
+          </p>
+          <button
+            class="btn-glow"
+            onclick="window.location.href = './explore.html'"
+          >
+            EXPLORE MISSIONS
+          </button>
+        </article>
+      </section>
+      <section id="apod-section" class="card">
+        <h2>Astronomic Picture of the Day (APOD)</h2>
+        <div id="apod-content">
+          <div class="loading">Searching for wonders in deep space...</div>
+        </div>
+      </section>
+
+      <section id="news-section">
+        <h2>Latest Space Headlines</h2>
+        <div id="news-container" class="grid-container"></div>
+      </section>
+    </main>
+    <div id="main-footer"></div>
+  </body>
+</html>

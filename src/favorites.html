@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CosmoPulse | My Favorites</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/imgs/android-chrome-512x512-removebg-preview.png" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/cosmopulse.css" />
+    <link rel="stylesheet" href="./css/cosmopulse-large.css" />
+    <link rel="stylesheet" href="./css/cosmopulse-extra-large.css" />
+    <script src="./js/main.js" type="module"></script>
+  </head>
+  <body>
+    <div id="main-header"></div>
+
+    <main class="container">
+      <section class="favorites-section">
+        <h2 class="section-title">Cosmic Hub</h2>
+        <p class="section-subtitle">
+          Explore the NASA archives and manage your custom collection of space
+          discoveries.
+        </p>
+
+        <div class="fav-sub-group">
+          <h3 class="sub-title">🌌 Cosmic Media Gallery</h3>
+
+          <form id="gallery-search-form" class="radar-controls">
+            <label for="search-input">Search Universe:</label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="e.g., Mars, Nebula, Apollo..."
+              required
+            />
+            <button
+              type="submit"
+              class="countdown-clock"
+              style="margin: 0; padding: 0.5rem 1rem; cursor: pointer"
+            >
+              Search
+            </button>
+          </form>
+
+          <div
+            id="gallery-search-results"
+            class="grid-layout"
+            style="margin-bottom: 3rem"
+          ></div>
+        </div>
+
+        <hr
+          style="border: 1px solid var(--border-color); margin-bottom: 3rem"
+        />
+
+        <div class="fav-sub-group">
+          <h3 class="sub-title">⭐ My Saved Cosmos</h3>
+          <p class="section-subtitle" style="margin-bottom: 1.5rem">
+            Your personalized feed of bookmarked articles, APOD captures, and
+            gallery media.
+          </p>
+
+          <div id="unified-favorites-gallery" class="grid-layout">
+            <p class="empty-message">
+              Your custom universe is empty. Start exploring and bookmarking
+              items!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="main-footer"></div>
+  </body>
+</html>
