@@ -8,7 +8,7 @@ export function headerTemplate() {
       </div>
     <nav id="nav-bar" class="navigation">
         <ul>
-          <li><a href="/index.html" data-page="index">Dashboard</a></li>
+                <li><a href="/index.html" data-page="index">Dashboard</a></li>
                 <li><a href="/explore.html" data-page="explore">Explore</a></li>
                 <li><a href="/radar.html" data-page="radar">Radar</a></li>
                 <li><a href="/favorites.html" data-page="favorites">Favorites</a></li> 
