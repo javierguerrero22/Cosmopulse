@@ -703,3 +703,11 @@ footer {
   color: var(--text-secondary);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
+.trello{
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: .3s;
+}
+.trello:hover{
+  color: var(--neon-glow-cyan);
+}

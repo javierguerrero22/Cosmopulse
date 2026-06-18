@@ -24,7 +24,7 @@ export function footerTemplate() {
   return `
     <footer class="footer-container">
         <p>&copy; ${new Date().getFullYear()} CosmoPulse | WDD 330 Final Project</p>
-        
+        <a class="trello" href="https://trello.com/b/jW5W4Rtd/cosmopulse">Trello Board</a>
     </footer>
   `;
 }
