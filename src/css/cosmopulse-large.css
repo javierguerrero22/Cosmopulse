@@ -1,5 +1,6 @@
 @media (min-width: 720px) {
-  .grid-container {
+  .grid-container , .grid-layout, .radar-grid{
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
   .hamburger {
@@ -58,4 +59,7 @@
     font-size: larger;
     padding: 15px 35px;
   }
+  /* .loading-state{
+    grid-column: 1/3;
+  } */
 }

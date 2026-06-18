@@ -1,36 +1,59 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CosmoPulse | Explore Universe</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="/imgs/android-chrome-512x512-removebg-preview.png" />
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/cosmopulse.css" />
-    <link rel="stylesheet" href="./css/cosmopulse-large.css" />
-    <link rel="stylesheet" href="./css/cosmopulse-extra-large.css" />
-    <script src="./js/main.js" type="module"></script>
-  </head>
-  <body>
-    <div id="main-header"></div>
 
-    <main class="container">
-      <section class="launches-section">
-        <h2 class="section-title">Upcoming Releases</h2>
-        <div id="launches-container" class="grid-layout"></div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CosmoPulse | Explore Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="/imgs/logo.webp" />
+  <link rel="stylesheet" href="./css/normalize.css" />
+  <link rel="stylesheet" href="./css/cosmopulse.css" />
+  <link rel="stylesheet" href="./css/cosmopulse-large.css" />
+  <link rel="stylesheet" href="./css/cosmopulse-extra-large.css" />
+  <script src="./js/main.js" type="module"></script>
+  <script type="module" src="./js/explore.js"></script>
+  <!-- <script type="module" src="./js/favorites.js"></script> -->
+</head>
 
-      <section class="news-section">
-        <h2 class="section-title">Deep Space News</h2>
-        <div id="news-content" class="grid-layout"></div>
-      </section>
-    </main>
-    <div id="main-footer"></div>
-  </body>
+<body>
+  <div id="main-header"></div>
+
+  <main class="container">
+    <section class="launches-section">
+      <h2 class="section-title">Upcoming Releases</h2>
+      <div id="launches-container" class="grid-layout">
+        <div class="loading-state">Scanning deep space...<div id='loader'></div>
+        </div>
+      </div>
+      <div id="launches-pagination-wrapper" style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
+        <button class="btn-pagination" onclick="loadNextLaunchesPage()">Next Launches ➔</button>
+      </div>
+    </section>
+
+    <section class="news-section">
+      <h2 class="section-title">Deep Space News</h2>
+      <div id="news-content" class="grid-layout">
+        <div class="loading-state">Scanning deep space...<div id='loader'></div>
+        </div>
+      </div>
+      <div id="news-pagination-wrapper" style="text-align: center; margin-top: 30px;">
+        <button class="btn-pagination" onclick="loadNextNewsPage()">Next News ➔</button>
+      </div>
+    </section>
+  </main>
+  <div id="launch-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card">
+      <button id="close-modal-btn" class="modal-close-btn">&times;</button>
+      <div id="modal-flight-info">
+      </div>
+    </div>
+  </div>
+  <div id="main-footer"></div>
+</body>
+
 </html>
