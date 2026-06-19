@@ -28,7 +28,7 @@ async function loadLaunches() {
         };
     }
 
-    const offset = (launchesPage - 1) * 5;
+    const offset = (launchesPage - 1) * 6;
     container.innerHTML = `<div class="loading-state">Syncing orbital telemetry...<div id='loader'></div></div>`;
     if (paginationWrapper) paginationWrapper.innerHTML = "";
 
