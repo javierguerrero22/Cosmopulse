@@ -299,10 +299,7 @@ main h2 {
   box-shadow: 0 10px 25px var(--neon-glow-cyan);
   border-color: var(--accent-cyan);
 }
-.grid-layout{
-  display: grid;
-  gap: 30px;
-}
+
 .launch-card h3 {
   color: var(--accent-cyan);
   margin-bottom: 0.5rem;
@@ -698,7 +695,13 @@ main h2 {
   color: var(--bg-space);
   box-shadow: 0 0 15px var(--accent-cyan);
 }
-
+.grid-layout{
+  display: grid;
+  gap: 30px;
+}
+.grid-layout .launch-card, .grid-layout .news-card, .grid-layout .media-card{
+  margin: 0;
+}
 footer {
   text-align: center;
   padding: 40px 8%;
